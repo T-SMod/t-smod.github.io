@@ -1,1 +1,0 @@
-(window.webpackJsonpGUI=window.webpackJsonpGUI||[]).push([[63],{1684:function(n,e,s){"use strict";s.r(e),s.d(e,"resources",function(){return c});var r=s(1685);const c={"remove-feedback.css":s.n(r).a}},1685:function(n,e,s){(n.exports=s(9)(!1)).push([n.i,'a[class^="menu-bar_feedback-link_"] {\r\n  display: none;\r\n}\r\n',""])}}]);

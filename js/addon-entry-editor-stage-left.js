@@ -1,0 +1,83 @@
+(window["webpackJsonpGUI"] = window["webpackJsonpGUI"] || []).push([["addon-entry-editor-stage-left"],{
+
+/***/ "./node_modules/css-loader/index.js!./src/addons/addons/editor-stage-left/stageleft.css":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/css-loader!./src/addons/addons/editor-stage-left/stageleft.css ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "[dir=\"ltr\"] [class^=\"stage-header_stage-size-toggle-group\"] [class^=\"stage-header_stage-button-icon\"] {\r\n  transform: scaleX(-1);\r\n}\r\n[dir=\"rtl\"] [class^=\"stage-header_stage-size-toggle-group\"] [class^=\"stage-header_stage-button-icon\"] {\r\n  transform: none;\r\n}\r\n[class^=\"target-pane_target-pane\"] {\r\n  flex-direction: row-reverse;\r\n}\r\n[dir=\"ltr\"] [class^=\"target-pane_stage-selector-wrapper\"] {\r\n  margin-left: 0;\r\n  margin-right: calc(0.5rem / 2);\r\n}\r\n[dir=\"ltr\"] [class^=\"sprite-selector_sprite-selector\"] {\r\n  margin-left: calc(0.5rem / 2);\r\n  margin-right: 0;\r\n}\r\n[dir=\"rtl\"] [class^=\"target-pane_stage-selector-wrapper\"] {\r\n  margin-right: 0;\r\n  margin-left: calc(0.5rem / 2);\r\n}\r\n[dir=\"rtl\"] [class^=\"sprite-selector_sprite-selector\"] {\r\n  margin-right: calc(0.5rem / 2);\r\n  margin-left: 0;\r\n}\r\n[class^=\"gui_flex-wrapper\"] {\r\n  flex-direction: row-reverse;\r\n  overflow-x: hidden;\r\n}\r\n\r\n[dir=\"ltr\"] [class^=\"backpack_backpack-header\"] {\r\n  border-top-right-radius: 0;\r\n  border-top-left-radius: 0.5rem;\r\n}\r\n[dir=\"ltr\"] [class^=\"blocks_blocks_C530M\"] .injectionDiv,\r\n[dir=\"ltr\"] [class^=\"asset-panel_wrapper\"] {\r\n  border-top-right-radius: 0;\r\n  border-bottom-right-radius: 0;\r\n  border-bottom-left-radius: 0.5rem;\r\n}\r\n[dir=\"ltr\"] [class^=\"gui_extension-button-container\"] {\r\n  border-bottom-left-radius: 0.5rem;\r\n}\r\n\r\n[dir=\"rtl\"] [class^=\"backpack_backpack-header\"] {\r\n  border-top-left-radius: 0;\r\n  border-top-right-radius: 0.5rem;\r\n}\r\n[dir=\"rtl\"] [class^=\"blocks_blocks_C530M\"] .injectionDiv,\r\n[dir=\"rtl\"] [class^=\"asset-panel_wrapper\"] {\r\n  border-top-left-radius: 0;\r\n  border-bottom-left-radius: 0;\r\n  border-bottom-right-radius: 0.5rem;\r\n}\r\n[dir=\"rtl\"] [class^=\"gui_extension-button-container\"] {\r\n  border-bottom-right-radius: 0.5rem;\r\n}\r\n\r\n.Popover {\r\n  /* See hide-flyout */\r\n  z-index: 51;\r\n}\r\n\r\n/* hide-stage compatibility */\r\n\r\n.sa-stage-hidden [class*=\"stage-header_stage-size-row\"] {\r\n  right: auto;\r\n  left: 0.5rem;\r\n  width: calc(240px + 0.125rem);\r\n  justify-content: flex-end;\r\n}\r\n\r\n[dir=\"rtl\"] .sa-stage-hidden [class*=\"stage-header_stage-size-row\"] {\r\n  left: auto;\r\n  right: 0.5rem;\r\n}\r\n\r\n.sa-stage-hidden [class*=\"gui_tab-list_\"] {\r\n  padding-inline-start: calc(240px + 1.125rem);\r\n}\r\n\r\n/* related to TW changes to headers */\r\n[dir=\"ltr\"] [class^=\"stage-header_stage-header-wrapper_\"] {\r\n  right: initial;\r\n  left: 0;\r\n}\r\n[dir=\"rtl\"] [class^=\"stage-header_stage-header-wrapper_\"] {\r\n  right: 0;\r\n  left: initial;\r\n}\r\n[class*=\"stage-wrapper_offset-controls_\"] {\r\n  z-index: 10;\r\n}\r\n[dir=\"rtl\"] [class^=\"stage-header_stage-header-wrapper_\"] {\r\n  right: 0 !important;\r\n}\r\n[dir=\"rtl\"] .sa-stage-hidden [class*=\"stage-header_stage-size-row\"] {\r\n  right: 0.5rem !important;\r\n  left: 0 !important;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./src/addons/addons/editor-stage-left/_runtime_entry.js":
+/*!***************************************************************!*\
+  !*** ./src/addons/addons/editor-stage-left/_runtime_entry.js ***!
+  \***************************************************************/
+/*! exports provided: resources */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resources", function() { return resources; });
+/* harmony import */ var _fix_share_the_love_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fix-share-the-love.js */ "./src/addons/addons/editor-stage-left/fix-share-the-love.js");
+/* harmony import */ var _css_loader_stageleft_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! css-loader!./stageleft.css */ "./node_modules/css-loader/index.js!./src/addons/addons/editor-stage-left/stageleft.css");
+/* harmony import */ var _css_loader_stageleft_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_loader_stageleft_css__WEBPACK_IMPORTED_MODULE_1__);
+/* generated by pull.js */
+
+
+const resources = {
+  "fix-share-the-love.js": _fix_share_the_love_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+  "stageleft.css": _css_loader_stageleft_css__WEBPACK_IMPORTED_MODULE_1___default.a
+};
+
+/***/ }),
+
+/***/ "./src/addons/addons/editor-stage-left/fix-share-the-love.js":
+/*!*******************************************************************!*\
+  !*** ./src/addons/addons/editor-stage-left/fix-share-the-love.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
+  let {
+    addon,
+    console
+  } = _ref;
+  const ScratchBlocks = await addon.tab.traps.getBlockly();
+  const resize = () => {
+    const workspace = Blockly.getMainWorkspace();
+    if (workspace) window.dispatchEvent(new Event("resize"));
+  };
+  addon.self.addEventListener("disabled", resize);
+  addon.self.addEventListener("reenabled", resize);
+  const originalGetClientRect = ScratchBlocks.VerticalFlyout.prototype.getClientRect;
+  ScratchBlocks.VerticalFlyout.prototype.getClientRect = function () {
+    const rect = originalGetClientRect.call(this);
+    if (!rect || addon.self.disabled) return rect;
+    // undo the effect of BIG_NUM in https://github.com/scratchfoundation/scratch-blocks/blob/ab26fa2960643fa38fbc7b91ca2956be66055070/core/flyout_vertical.js#L739
+    if (this.toolboxPosition_ === ScratchBlocks.TOOLBOX_AT_LEFT) {
+      rect.left += 1000000000;
+    }
+    rect.width -= 1000000000;
+    return rect;
+  };
+  resize();
+});
+
+/***/ })
+
+}]);
+//# sourceMappingURL=addon-entry-editor-stage-left.js.map
