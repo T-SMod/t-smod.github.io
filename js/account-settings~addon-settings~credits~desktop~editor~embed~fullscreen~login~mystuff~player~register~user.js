@@ -290,11 +290,11 @@ const guiColors = {
   'looks-light-transparent': '#ff4d4d26',
   'looks-secondary-dark': 'hsla(0, 42%, 51%, 1)',
   'data-primary': '#6992ff',
-  'extensions-primary': 'hsla(10, 85%, 65%, 1)',
+  'extensions-primary': '#4DB5FF',
   'extensions-tertiary': 'rgb(189, 99, 15)',
   'extensions-transparent': 'hsla(10, 85%, 65%, 0.35)',
   'extensions-light': 'hsla(10, 57%, 85%, 1)',
-  'drop-highlight': '#ff8c8c'
+  'drop-highlight': '#4DB5FF'
 };
 const blockColors = {
   checkboxActiveBackground: 'rgb(255, 183, 76)',
@@ -1032,7 +1032,7 @@ const guiColors = {
   'page-foreground': '#000000',
   'project-title-inactive': 'var(--ui-white-transparent)',
   'project-title-hover': '#ffffff7f',
-  'link-color': '#2255dd',
+  'link-color': '#0831a2',
   'filter-icon-black': 'none',
   'filter-icon-gray': 'grayscale(100%)',
   'filter-icon-white': 'none',
