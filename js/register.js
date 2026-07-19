@@ -360,17 +360,15 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const ButtonComponent = _ref => {
-  let {
-      className,
-      disabled,
-      iconAlt,
-      iconClassName,
-      iconSrc,
-      iconWidth,
-      iconHeight,
-      onClick,
-      children
-    } = _ref,
+  let className = _ref.className,
+    disabled = _ref.disabled,
+    iconAlt = _ref.iconAlt,
+    iconClassName = _ref.iconClassName,
+    iconSrc = _ref.iconSrc,
+    iconWidth = _ref.iconWidth,
+    iconHeight = _ref.iconHeight,
+    onClick = _ref.onClick,
+    children = _ref.children,
     props = _objectWithoutProperties(_ref, _excluded);
   if (disabled) {
     onClick = function onClick() {};
@@ -462,10 +460,8 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const Input = props => {
-  const {
-      small,
-      multiline
-    } = props,
+  const small = props.small,
+    multiline = props.multiline,
     componentProps = _objectWithoutProperties(props, _excluded);
   if (multiline) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", _extends({}, componentProps, {
@@ -611,11 +607,10 @@ class Register extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       verifying: false,
       error: null
     });
-    const {
-      username,
-      password,
-      confirmPassword
-    } = this.state;
+    const _this$state = this.state,
+      username = _this$state.username,
+      password = _this$state.password,
+      confirmPassword = _this$state.confirmPassword;
     try {
       // Maybe better to do this on backend ¯\_(ツ)_/¯
       if (password !== confirmPassword) throw new Error(this.props.intl.formatMessage(messages.passwordsDontMatch));

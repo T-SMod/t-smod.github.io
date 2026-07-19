@@ -251,11 +251,9 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 Object(_lib_themes_guiHelpers__WEBPACK_IMPORTED_MODULE_5__["applyGuiColors"])(Object(_lib_themes_themePersistance__WEBPACK_IMPORTED_MODULE_6__["detectTheme"])());
 document.documentElement.lang = 'en';
 const User = _ref => {
-  let {
-    image,
-    text,
-    href
-  } = _ref;
+  let image = _ref.image,
+    text = _ref.text,
+    href = _ref.href;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: href,
     target: "_blank",
@@ -277,9 +275,7 @@ User.propTypes = {
   href: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
 const UserList = _ref2 => {
-  let {
-    users
-  } = _ref2;
+  let users = _ref2.users;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: _credits_css__WEBPACK_IMPORTED_MODULE_3___default.a.users
   }, users.map((data, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(User, _extends({
@@ -364,11 +360,11 @@ const links = {
   }
 };
 const fromHardcoded = _ref => {
-  let {
-    userID = '0',
-    username,
-    link = "scratch"
-  } = _ref;
+  let _ref$userID = _ref.userID,
+    userID = _ref$userID === void 0 ? '0' : _ref$userID,
+    username = _ref.username,
+    _ref$link = _ref.link,
+    link = _ref$link === void 0 ? "scratch" : _ref$link;
   const result = {
     text: username
   };

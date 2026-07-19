@@ -1359,10 +1359,8 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const Input = props => {
-  const {
-      small,
-      multiline
-    } = props,
+  const small = props.small,
+    multiline = props.multiline,
     componentProps = _objectWithoutProperties(props, _excluded);
   if (multiline) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", _extends({}, componentProps, {
@@ -1504,6 +1502,12 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
@@ -1565,14 +1569,38 @@ const messages = Object(react_intl__WEBPACK_IMPORTED_MODULE_4__["defineMessages"
 });
 const User = props => {
   var _userData$profile;
-  const [id, setId] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(window.location.hash.replace('#', ''));
-  const [userData, setUserData] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(null);
-  const [descriptionDisabled, setDescriptionDisabled] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false);
-  const [projects, setProjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]);
-  const [avgGradient, setAvgGradient] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]);
-  const [isMyProfile, setIsMyProfile] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false);
-  const [loading, setLoading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true);
-  const [error, setError] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(null);
+  const _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(window.location.hash.replace('#', '')),
+    _useState2 = _slicedToArray(_useState, 2),
+    id = _useState2[0],
+    setId = _useState2[1];
+  const _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(null),
+    _useState4 = _slicedToArray(_useState3, 2),
+    userData = _useState4[0],
+    setUserData = _useState4[1];
+  const _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+    _useState6 = _slicedToArray(_useState5, 2),
+    descriptionDisabled = _useState6[0],
+    setDescriptionDisabled = _useState6[1];
+  const _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
+    _useState8 = _slicedToArray(_useState7, 2),
+    projects = _useState8[0],
+    setProjects = _useState8[1];
+  const _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])([]),
+    _useState0 = _slicedToArray(_useState9, 2),
+    avgGradient = _useState0[0],
+    setAvgGradient = _useState0[1];
+  const _useState1 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+    _useState10 = _slicedToArray(_useState1, 2),
+    isMyProfile = _useState10[0],
+    setIsMyProfile = _useState10[1];
+  const _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+    _useState12 = _slicedToArray(_useState11, 2),
+    loading = _useState12[0],
+    setLoading = _useState12[1];
+  const _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(null),
+    _useState14 = _slicedToArray(_useState13, 2),
+    error = _useState14[0],
+    setError = _useState14[1];
   const fileInputRef = Object(react__WEBPACK_IMPORTED_MODULE_2__["useRef"])(null);
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
     setId(window.location.hash.replace('#', ''));
@@ -1629,11 +1657,24 @@ const User = props => {
           }
         }
         if (colors.length > 0) {
-          const [r, g, b, a] = colors.reduce((_ref, _ref2) => {
-            let [r1, g1, b1, a1] = _ref;
-            let [r2, g2, b2, a2] = _ref2;
-            return [r1 + r2, g1 + g2, b1 + b2, a1 + a2];
-          }, [0, 0, 0, 0]).map(v => v / colors.length);
+          const _colors$reduce$map = colors.reduce((_ref, _ref2) => {
+              let _ref3 = _slicedToArray(_ref, 4),
+                r1 = _ref3[0],
+                g1 = _ref3[1],
+                b1 = _ref3[2],
+                a1 = _ref3[3];
+              let _ref4 = _slicedToArray(_ref2, 4),
+                r2 = _ref4[0],
+                g2 = _ref4[1],
+                b2 = _ref4[2],
+                a2 = _ref4[3];
+              return [r1 + r2, g1 + g2, b1 + b2, a1 + a2];
+            }, [0, 0, 0, 0]).map(v => v / colors.length),
+            _colors$reduce$map2 = _slicedToArray(_colors$reduce$map, 4),
+            r = _colors$reduce$map2[0],
+            g = _colors$reduce$map2[1],
+            b = _colors$reduce$map2[2],
+            a = _colors$reduce$map2[3];
           avgCssColors.push("color-mix(in srgb, rgb(".concat(r, ", ").concat(g, ", ").concat(b, "), var(--ui-white) ").concat(60 + (a - 255) / 2.55 * 0.4, "%)"));
         } else {
           avgCssColors.push("var(--ui-white)");

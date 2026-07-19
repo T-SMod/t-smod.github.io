@@ -328,17 +328,15 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const ButtonComponent = _ref => {
-  let {
-      className,
-      disabled,
-      iconAlt,
-      iconClassName,
-      iconSrc,
-      iconWidth,
-      iconHeight,
-      onClick,
-      children
-    } = _ref,
+  let className = _ref.className,
+    disabled = _ref.disabled,
+    iconAlt = _ref.iconAlt,
+    iconClassName = _ref.iconClassName,
+    iconSrc = _ref.iconSrc,
+    iconWidth = _ref.iconWidth,
+    iconHeight = _ref.iconHeight,
+    onClick = _ref.onClick,
+    children = _ref.children,
     props = _objectWithoutProperties(_ref, _excluded);
   if (disabled) {
     onClick = function onClick() {};

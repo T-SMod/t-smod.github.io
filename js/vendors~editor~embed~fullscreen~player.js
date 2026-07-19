@@ -6435,7 +6435,7 @@ __webpack_require__.r(__webpack_exports__);
     Note to contributors & developers that can read JSON:
         The extra commas are added at the end of each thing
         to help copy & pasting work better.
-        Please, dont remove them :)
+        Please, don't remove them :)
 */
 const extensions = [
     {
@@ -6520,6 +6520,15 @@ const extensions = [
         creator: { name: "Den4ik-12", link: "https://github.com/DDen4ik-12" },
     },
     {
+        name: "Targets",
+        id: "Den4ik12Targets",
+        description:
+            "Easily manage your sprites, clones, and their properties.",
+        code: "Den4ik-12/Targets.js",
+        banner: "Den4ik-12/Targets.svg",
+        creator: { name: "Den4ik-12", link: "https://github.com/DDen4ik-12" },
+    },
+    {
         name: "Modals",
         id: "htmlalert",
         description: "Control classic modal windows in browsers!",
@@ -6572,6 +6581,18 @@ const extensions = [
         ],
     },
     {
+        name: "Dash API",
+        id: "DashAPI",
+        description: "Blocks that interact with the Dash API. Official.",
+        code: "shaman2016/DashAPI.js",
+        // banner: "shaman2016/DashAPI.svg",
+        creator: [
+            { name: "polzovatel_8787", link: "_dash_" },
+            { name: "DBDev-IT", link: "_github_" },
+        ],
+        internetConnectionRequired: true,
+    },
+    {
         name: "Auto Save",
         id: "qbacksAutosSave",
         description: "Several features for games",
@@ -6622,7 +6643,7 @@ const otherExtensions = [
     {
         name: "Boxed Physics",
         id: "P7BoxPhys",
-        description: "Implements the Box2D physics engine into PenguinMod, adding joints, springs, etc. This is different from TurboWarp's implementation.",
+        description: "Implements the Box2D physics engine, adding joints, springs, etc. This is different from TurboWarp's implementation.",
         code: "pooiod/Box2D.js",
         banner: "pooiod/B2Dimg.svg",
         creator: "pooiod7",
@@ -6646,43 +6667,6 @@ const otherExtensions = [
         isGitHub: false,
         unstable: true,
         unstableReason: "WebGPU is still experimental and not supported by all browsers and does not work when packaged to electron. Check compatibility at webgpu.io."
-    },
-    {
-        name: "Object",
-        id: "skyhigh173object",
-        description: "Handle large JSON files at an extreme speed.",
-        code: "skyhigh173/object.js",
-        banner: "skyhigh173/object.svg",
-        creator: "skyhigh173",
-        isGitHub: true,
-    },
-    {
-        name: "Scope Variable",
-        id: "0zCsv",
-        description: "Manage your variables in a block-like structure.",
-        code: "0znzw/ScopeVars.js",
-        banner: "0znzw/ScopeVars.png",
-        creator: "yuri-kiss",
-        isGitHub: true,
-        unstable: true,
-        unstableReason: "This extension uses unstable techniques that may not always work.",
-    },
-    {
-        name: "Extra Timers",
-        id: "steve0greatnesstimers",
-        description: "Allows for the creation and management of additional timer blocks.",
-        code: "steve0greatness/timers.js",
-        banner: "steve0greatness/timers.svg",
-        creator: "Steve0Greatness",
-        isGitHub: true, 
-    },
-    {
-        name: "Dictation",
-        id: "pooiod7Dictation",
-        description: "Convert your voice into text. (not supported in all browsers)",
-        code: "pooiod/Dictation.js",
-        banner: "pooiod/Dictation.svg",
-        creator: "pooiod7",
     },
     {
         name: "Stylus",
@@ -6749,26 +6733,6 @@ const otherExtensions = [
         isGitHub: true
     },
     {
-        name: "Background Remover",
-        id: "dumzdevBGRemover",
-        description: "Removes background from images.",
-        code: "dumzdev/removebg.js",
-        banner: "dumzdev/removebgbanner.svg",
-        creator: "dumzdev",
-    },
-    {
-        name: "PenguinAI",
-        id: "penguinGPT",
-        description: "Talk to AI! Use Models like DALL-E-3, GPT, LLama, Claude, and more!",
-        code: "MubiLop/penguingpt.js",
-        banner: "MubiLop/penguingpt.png",
-        creator: "cicerorph",
-        creatorAlias: "MubiLop",
-        isGitHub: true,
-        unstable: true,
-        unstableReason: "AI models can generate unintended or inappropriate output.\nSome AI models may also become temporarily inaccessible.\n\nUse at your own risk.",
-    },
-    {
         name: "Block AI",
         id: "pangpalgemini",
         description: "An AI powered chat bot to help you code in your projects.",
@@ -6779,16 +6743,6 @@ const otherExtensions = [
         isGitHub: true,
         unstable: true,
         unstableReason: "The AI model can generate inaccurate output and broken syntax!",
-    },
-    {
-        name: "PenguinHook",
-        id: "mubiloppenguinhook",
-        description: "Send Webhook requests, that can be Discord or any type of webhook.",
-        code: "MubiLop/penguinhook.js",
-        banner: "MubiLop/penguinhook.png",
-        creator: "cicerorph",
-        creatorAlias: "MubiLop",
-        isGitHub: true,
     },
     {
         name: "Number Utilities",
@@ -6821,16 +6775,6 @@ const otherExtensions = [
         isGitHub: true,
     },
     {
-        name: "Format Numbers",
-        id: "formatNumbers",
-        description: "Format large numbers into AD standard, fixed decimal, comma separated, or scientific notation.",
-        code: "DogeisCut/FormatNumbers.js",
-        banner: "DogeisCut/FormatNumbers.png",
-        creator: "DogeisCut",
-        isGitHub: true, 
-        notes: "Gallery banner by Dillon",
-    },
-    {
         name: "Date Format",
         id: "ddeDateFormatV2",
         description: "Manage, format and compare dates.",
@@ -6848,33 +6792,6 @@ const otherExtensions = [
         creator: "NotEmbin",
         isGitHub: true, 
         creatorAlias: "Embin",
-    },
-    {
-        name: "Yet Another String Extension",
-        id: "dogeiscutyetanotherstringextension",
-        description: "A small collection of utilty blocks intended to make managing strings much, much easier.",
-        code: "DogeisCut/YetAnotherStringExtension.js",
-        banner: "DogeisCut/YetAnotherStringExtension.svg",
-        creator: "DogeisCut",
-        isGitHub: true, 
-    },
-    {
-        name: "Sets",
-        id: "dogeiscutSet",
-        description: "Store non-repeating, unordered data super efficiently in sets.",
-        code: "DogeisCut/dogeiscutSet.js",
-        banner: "DogeisCut/dogeiscutSet.svg",
-        creator: "DogeisCut",
-        isGitHub: true, 
-    },
-    {
-        name: "Blobs",
-        id: "FaunksBlobs",
-        description: "An extension made for handling blobs which can be used to store files. Allows to easily make blobs for the Js extension",
-        code: "Faunks/Blobs.js",
-        banner: "Faunks/Blobs.avif",
-        creator: "Faunks",
-        isGitHub: true,
     },
     {
         name: "Random Utilities",
@@ -6916,18 +6833,9 @@ const otherExtensions = [
         isGitHub: false, 
     },
     {
-        name: "Pang API",
-        id: "sammerpenguinapi",
-        description: "Fetch information from the PenguinMod API.",
-        code: "SammerLOL/pangapi.js",
-        banner: "SammerLOL/pangapi.png",
-        creator: "oc9x97",
-        isGitHub: true,
-    },
-    {
         name: "TurboWeather",
         id: "turboweather",
-        description: "Show weather and location data for any place in our world. Data that could be used for doxxing is deleted from results.",
+        description: "Show weather and location data for any place in our world.",
         code: "RubyDevs/turboweather.js",
         banner: "RubyDevs/turboweather.webp",
         documentation: "TurboWeather",
@@ -6968,15 +6876,6 @@ const otherExtensions = [
         banner: "jwklong/projectpage.png",
         creator: "jwklong",
         isGitHub: true,
-    },
-    {
-        name: "All Menus",
-        id: "lmsAllMenus",
-        description: "Every dropdown menu for each block, in one extension.",
-        code: "Lily/AllMenus.js",
-        banner: "Lily/AllMenus.svg",
-        creator: "LilyMakesThings",
-        isGitHub: false,
     },
     {
         name: "More Fields",
@@ -7105,15 +7004,6 @@ const otherExtensions = [
         banner: "WAYLIVES/FreeServersIMG.svg",
         documentation: "FreeServers",
         creator: "WAYLIVES",
-        isGitHub: false,
-    },
-    {
-        name: "More Types",
-        id: "vgscompiledvalues",
-        description: "Adds more value types to PenguinMod, implementing Functions, Objects, Arrays, Sets, Maps, Symbols and Nothing.",
-        code: "VeryGoodScratcher42/More-Types.js",
-        banner: "VeryGoodScratcher42/More-Types.png",
-        creator: "VeryGoodScratcher42",
         isGitHub: false,
     },
     {
@@ -28022,9 +27912,9 @@ class ArrayBufferStream {
   constructor(arrayBuffer) {
     let start = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
     let end = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : arrayBuffer.byteLength;
-    let {
-      _uint8View = new Uint8Array(arrayBuffer)
-    } = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+    let _ref = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {},
+      _ref$_uint8View = _ref._uint8View,
+      _uint8View = _ref$_uint8View === void 0 ? new Uint8Array(arrayBuffer) : _ref$_uint8View;
     /**
      * Raw data buffer for stream to read.
      * @type {ArrayBufferStream}
@@ -28186,6 +28076,12 @@ module.exports = ArrayBufferStream;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 const StartAudioContext = __webpack_require__(/*! ./StartAudioContext */ "./node_modules/scratch-audio/src/StartAudioContext.js");
 const log = __webpack_require__(/*! ./log */ "./node_modules/scratch-audio/src/log.js");
 const uid = __webpack_require__(/*! ./uid */ "./node_modules/scratch-audio/src/uid.js");
@@ -28387,7 +28283,9 @@ class AudioEngine {
    */
   decodeSound(sound) {
     return this._decodeSound(sound).then(_ref => {
-      let [id, buffer] = _ref;
+      let _ref2 = _slicedToArray(_ref, 2),
+        id = _ref2[0],
+        buffer = _ref2[1];
       this.audioBuffers[id] = buffer;
       return id;
     });
@@ -28405,8 +28303,10 @@ class AudioEngine {
    * @returns {?Promise} - a promise which will resolve to the buffer
    */
   decodeSoundPlayer(sound) {
-    return this._decodeSound(sound).then(_ref2 => {
-      let [id, buffer] = _ref2;
+    return this._decodeSound(sound).then(_ref3 => {
+      let _ref4 = _slicedToArray(_ref3, 2),
+        id = _ref4[0],
+        buffer = _ref4[1];
       return new SoundPlayer(this, {
         id,
         buffer
@@ -28712,9 +28612,8 @@ module.exports = SoundBank;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const {
-  EventEmitter
-} = __webpack_require__(/*! events */ "./node_modules/events/events.js");
+const _require = __webpack_require__(/*! events */ "./node_modules/events/events.js"),
+  EventEmitter = _require.EventEmitter;
 const VolumeEffect = __webpack_require__(/*! ./effects/VolumeEffect */ "./node_modules/scratch-audio/src/effects/VolumeEffect.js");
 
 /**
@@ -28733,10 +28632,8 @@ class SoundPlayer extends EventEmitter {
    * @constructor
    */
   constructor(audioEngine, _ref) {
-    let {
-      id,
-      buffer
-    } = _ref;
+    let id = _ref.id,
+      buffer = _ref.buffer;
     super();
 
     /**
@@ -28971,10 +28868,9 @@ class SoundPlayer extends EventEmitter {
       this.outputNode.start();
     }
     this.isPlaying = true;
-    const {
-      currentTime,
-      DECAY_DURATION
-    } = this.audioEngine;
+    const _this$audioEngine = this.audioEngine,
+      currentTime = _this$audioEngine.currentTime,
+      DECAY_DURATION = _this$audioEngine.DECAY_DURATION;
     this.startingUntil = currentTime + DECAY_DURATION;
     this.emit('play');
   }
@@ -28999,10 +28895,9 @@ class SoundPlayer extends EventEmitter {
 
     taken.finished().then(() => taken.dispose());
     taken.volumeEffect.set(0);
-    const {
-      currentTime,
-      DECAY_DURATION
-    } = this.audioEngine;
+    const _this$audioEngine2 = this.audioEngine,
+      currentTime = _this$audioEngine2.currentTime,
+      DECAY_DURATION = _this$audioEngine2.DECAY_DURATION;
     taken.outputNode.stop(currentTime + DECAY_DURATION);
   }
 
@@ -29346,10 +29241,8 @@ class EffectChain {
    * @param {object} target - target whose node to should be connected
    */
   connect(target) {
-    const {
-      firstEffect,
-      lastEffect
-    } = this;
+    const firstEffect = this.firstEffect,
+      lastEffect = this.lastEffect;
     if (target === lastEffect) {
       this.inputNode.disconnect();
       this.inputNode.connect(lastEffect.getInputNode());
@@ -29621,11 +29514,10 @@ class PanEffect extends Effect {
     // See e.g. https://docs.cycling74.com/max7/tutorials/13_panningchapter01
     const leftVal = Math.cos(p * Math.PI / 2);
     const rightVal = Math.sin(p * Math.PI / 2);
-    const {
-      currentTime,
-      DECAY_WAIT,
-      DECAY_DURATION
-    } = this.audioEngine;
+    const _this$audioEngine = this.audioEngine,
+      currentTime = _this$audioEngine.currentTime,
+      DECAY_WAIT = _this$audioEngine.DECAY_WAIT,
+      DECAY_DURATION = _this$audioEngine.DECAY_DURATION;
     this.leftGain.gain.setTargetAtTime(leftVal, currentTime + DECAY_WAIT, DECAY_DURATION);
     this.rightGain.gain.setTargetAtTime(rightVal, currentTime + DECAY_WAIT, DECAY_DURATION);
   }
@@ -29838,13 +29730,10 @@ class VolumeEffect extends Effect {
    */
   _set(value) {
     this.value = value;
-    const {
-      gain
-    } = this.outputNode;
-    const {
-      currentTime,
-      DECAY_DURATION
-    } = this.audioEngine;
+    const gain = this.outputNode.gain;
+    const _this$audioEngine = this.audioEngine,
+      currentTime = _this$audioEngine.currentTime,
+      DECAY_DURATION = _this$audioEngine.DECAY_DURATION;
     gain.linearRampToValueAtTime(value / 100, currentTime + DECAY_DURATION);
   }
 
@@ -30798,10 +30687,9 @@ module.exports = Drawable;
  */
 
 const twgl = __webpack_require__(/*! twgl.js */ "./node_modules/twgl.js/dist/4.x/twgl-full.js");
-const {
-  rgbToHsv,
-  hsvToRgb
-} = __webpack_require__(/*! ./util/color-conversions */ "./node_modules/scratch-render/src/util/color-conversions.js");
+const _require = __webpack_require__(/*! ./util/color-conversions */ "./node_modules/scratch-render/src/util/color-conversions.js"),
+  rgbToHsv = _require.rgbToHsv,
+  hsvToRgb = _require.hsvToRgb;
 const ShaderManager = __webpack_require__(/*! ./ShaderManager */ "./node_modules/scratch-render/src/ShaderManager.js");
 
 /**
@@ -30988,6 +30876,12 @@ module.exports = EffectTransform;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 const twgl = __webpack_require__(/*! twgl.js */ "./node_modules/twgl.js/dist/4.x/twgl-full.js");
 const RenderConstants = __webpack_require__(/*! ./RenderConstants */ "./node_modules/scratch-render/src/RenderConstants.js");
 const Skin = __webpack_require__(/*! ./Skin */ "./node_modules/scratch-render/src/Skin.js");
@@ -31377,7 +31271,9 @@ class PenSkin extends Skin {
    * @private
    */
   _setCanvasSize(canvasSize) {
-    const [width, height] = canvasSize;
+    const _canvasSize = _slicedToArray(canvasSize, 2),
+      width = _canvasSize[0],
+      height = _canvasSize[1];
 
     // tw: do not resize if new size === old size
     if (this._size && this._size[0] === width && this._size[1] === height) {
@@ -31694,6 +31590,12 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 const EventEmitter = __webpack_require__(/*! events */ "./node_modules/events/events.js");
 const hull = __webpack_require__(/*! @turbowarp/ancient-hull.js */ "./node_modules/@turbowarp/ancient-hull.js/src/hull.js");
 const twgl = __webpack_require__(/*! twgl.js */ "./node_modules/twgl.js/dist/4.x/twgl-full.js");
@@ -31992,7 +31894,9 @@ class RenderWebGL extends EventEmitter {
       PenSkin,
       SVGSkin,
       CanvasMeasurementProvider,
-      Rectangle
+      Rectangle,
+      EffectTransform,
+      ShaderManager
     };
   }
 
@@ -32060,9 +31964,7 @@ class RenderWebGL extends EventEmitter {
    * @param {int} pixelsTall The desired height in device-independent pixels.
    */
   resize(pixelsWide, pixelsTall) {
-    const {
-      canvas
-    } = this._gl;
+    const canvas = this._gl.canvas;
     const pixelRatio = window.devicePixelRatio || 1;
     const newWidth = Math.round(pixelsWide * pixelRatio);
     const newHeight = Math.round(pixelsTall * pixelRatio);
@@ -32192,7 +32094,9 @@ class RenderWebGL extends EventEmitter {
     }
   }
   _updateOverlays() {
-    const [nativeWidth, nativeHeight] = this._nativeSize;
+    const _this$_nativeSize = _slicedToArray(this._nativeSize, 2),
+      nativeWidth = _this$_nativeSize[0],
+      nativeHeight = _this$_nativeSize[1];
     const dpiIndependentWidth = this.canvas.width / window.devicePixelRatio;
     const dpiIndependentHeight = this.canvas.height / window.devicePixelRatio;
     this.overlayContainer.style.width = "".concat(dpiIndependentWidth, "px");
@@ -32710,9 +32614,7 @@ class RenderWebGL extends EventEmitter {
     // if there are just too many pixels to CPU render efficiently, we need to let readPixels happen
     if (bounds.width * bounds.height * (candidates.length + 1) >= maxPixelsForCPU) {
       this._isTouchingColorGpuStart(drawableID, candidates.map(_ref => {
-        let {
-          id
-        } = _ref;
+        let id = _ref.id;
         return id;
       }).reverse(), bounds, color3b, mask3b);
     }
@@ -33261,9 +33163,7 @@ class RenderWebGL extends EventEmitter {
    */
   _candidatesBounds(candidates) {
     return candidates.reduce((memo, _ref2) => {
-      let {
-        intersection
-      } = _ref2;
+      let intersection = _ref2.intersection;
       if (!memo) {
         return intersection;
       }
@@ -33531,7 +33431,9 @@ class RenderWebGL extends EventEmitter {
    */
   onNativeSizeChanged(event) {
     this.dirty = true;
-    const [width, height] = event.newSize;
+    const _event$newSize = _slicedToArray(event.newSize, 2),
+      width = _event$newSize[0],
+      height = _event$newSize[1];
     const gl = this._gl;
     const attachments = [{
       format: gl.RGBA
@@ -33677,7 +33579,9 @@ class RenderWebGL extends EventEmitter {
    */
   _getConvexHullPointsForDrawable(drawableID) {
     const drawable = this._allDrawables[drawableID];
-    const [width, height] = drawable.skin.size;
+    const _drawable$skin$size = _slicedToArray(drawable.skin.size, 2),
+      width = _drawable$skin$size[0],
+      height = _drawable$skin$size[1];
     // No points in the hull if invisible or size is 0.
     if (!drawable.getVisible() || width === 0 || height === 0) {
       return [];
@@ -33924,12 +33828,17 @@ module.exports = RenderWebGL;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 const twgl = __webpack_require__(/*! twgl.js */ "./node_modules/twgl.js/dist/4.x/twgl-full.js");
 const Skin = __webpack_require__(/*! ./Skin */ "./node_modules/scratch-render/src/Skin.js");
-const {
-  loadSvgString,
-  serializeSvgToString
-} = __webpack_require__(/*! @turbowarp/scratch-svg-renderer */ "./node_modules/@turbowarp/scratch-svg-renderer/src/index.js");
+const _require = __webpack_require__(/*! @turbowarp/scratch-svg-renderer */ "./node_modules/@turbowarp/scratch-svg-renderer/src/index.js"),
+  loadSvgString = _require.loadSvgString,
+  serializeSvgToString = _require.serializeSvgToString;
 const ShaderManager = __webpack_require__(/*! ./ShaderManager */ "./node_modules/scratch-render/src/ShaderManager.js");
 
 /**
@@ -34030,7 +33939,9 @@ class SVGSkin extends Skin {
     if (!isLargestMIP) {
       this._silhouette.unlazy();
     }
-    const [width, height] = this._size;
+    const _this$_size = _slicedToArray(this._size, 2),
+      width = _this$_size[0],
+      height = _this$_size[1];
     this._canvas.width = width * scale;
     this._canvas.height = height * scale;
     if (this._canvas.width <= 0 || this._canvas.height <= 0 ||
@@ -34110,12 +34021,11 @@ class SVGSkin extends Skin {
     const svgTag = loadSvgString(svgData);
     const svgText = serializeSvgToString(svgTag, this._renderer.customFonts);
     this._svgImageLoaded = false;
-    const {
-      x,
-      y,
-      width,
-      height
-    } = svgTag.viewBox.baseVal;
+    const _svgTag$viewBox$baseV = svgTag.viewBox.baseVal,
+      x = _svgTag$viewBox$baseV.x,
+      y = _svgTag$viewBox$baseV.y,
+      width = _svgTag$viewBox$baseV.width,
+      height = _svgTag$viewBox$baseV.height;
     // While we're setting the size before the image is loaded, this doesn't cause the skin to appear with the wrong
     // size for a few frames while the new image is loading, because we don't emit the `WasAltered` event, telling
     // drawables using this skin to update, until the image is loaded.
@@ -34385,11 +34295,9 @@ const intMax = (i, j) => i ^ (i ^ j) & i - j >> 31;
  * @return {number} Alpha value for x/y position
  */
 const getPoint = (_ref, x, y) => {
-  let {
-    _width: width,
-    _height: height,
-    _colorData: data
-  } = _ref;
+  let width = _ref._width,
+    height = _ref._height,
+    data = _ref._colorData;
   // 0 if outside bounds, otherwise read from data.
   if (x >= width || y >= height || x < 0 || y < 0) {
     return 0;
@@ -34412,11 +34320,9 @@ const __cornerWork = [new Uint8ClampedArray(4), new Uint8ClampedArray(4), new Ui
  * @return {Uint8ClampedArray} The dst vector.
  */
 const getColor4b = (_ref2, x, y, dst) => {
-  let {
-    _width: width,
-    _height: height,
-    _colorData: data
-  } = _ref2;
+  let width = _ref2._width,
+    height = _ref2._height,
+    data = _ref2._colorData;
   // Clamp coords to edge, matching GL_CLAMP_TO_EDGE.
   // (See github.com/LLK/scratch-render/blob/954cfff02b08069a082cbedd415c1fecd9b1e4fb/src/BitmapSkin.js#L88)
   x = intMax(0, intMin(x, width - 1));
@@ -34446,11 +34352,9 @@ const getColor4b = (_ref2, x, y, dst) => {
  * @return {Uint8ClampedArray} The dst vector.
  */
 const getPremultipliedColor4b = (_ref3, x, y, dst) => {
-  let {
-    _width: width,
-    _height: height,
-    _colorData: data
-  } = _ref3;
+  let width = _ref3._width,
+    height = _ref3._height,
+    data = _ref3._colorData;
   // Clamp coords to edge, matching GL_CLAMP_TO_EDGE.
   x = intMax(0, intMin(x, width - 1));
   y = intMax(0, intMin(y, height - 1));
@@ -35234,6 +35138,12 @@ module.exports = CanvasMeasurementProvider;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 /**
  * Converts an RGB color value to HSV. Conversion formula
  * adapted from http://lolengine.net/blog/2013/01/13/fast-rgb-to-hsv.
@@ -35248,7 +35158,10 @@ module.exports = CanvasMeasurementProvider;
  * @return  {Array<number>}       The `dst` array passed in
  */
 const rgbToHsv = (_ref, dst) => {
-  let [r, g, b] = _ref;
+  let _ref2 = _slicedToArray(_ref, 3),
+    r = _ref2[0],
+    g = _ref2[1],
+    b = _ref2[2];
   let K = 0.0;
   r /= 255;
   g /= 255;
@@ -35289,8 +35202,11 @@ const rgbToHsv = (_ref, dst) => {
  * @param   {Uint8Array|Uint8ClampedArray} dst The array to store the RGB values in
  * @return  {Uint8Array|Uint8ClampedArray}     The `dst` array passed in
  */
-const hsvToRgb = (_ref2, dst) => {
-  let [h, s, v] = _ref2;
+const hsvToRgb = (_ref3, dst) => {
+  let _ref4 = _slicedToArray(_ref3, 3),
+    h = _ref4[0],
+    s = _ref4[1],
+    v = _ref4[2];
   if (s === 0) {
     dst[0] = dst[1] = dst[2] = v * 255 + 0.5;
     return dst;
@@ -36654,6 +36570,14 @@ const tsExtensions = [
         id: 'zwnjByDCat2026',
         description: "",
         code: "DiamondCat/zwnj.js",
+        creator: [
+            { name: "DiamondCat2026-2", link: "_scratch_" }
+        ],
+    }, {
+        name: "Variables",
+        id: 'VariablesByDCat2026',
+        description: "",
+        code: "DiamondCat/variables_.js",
         creator: [
             { name: "DiamondCat2026-2", link: "_scratch_" }
         ],

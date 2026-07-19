@@ -360,17 +360,15 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const ButtonComponent = _ref => {
-  let {
-      className,
-      disabled,
-      iconAlt,
-      iconClassName,
-      iconSrc,
-      iconWidth,
-      iconHeight,
-      onClick,
-      children
-    } = _ref,
+  let className = _ref.className,
+    disabled = _ref.disabled,
+    iconAlt = _ref.iconAlt,
+    iconClassName = _ref.iconClassName,
+    iconSrc = _ref.iconSrc,
+    iconWidth = _ref.iconWidth,
+    iconHeight = _ref.iconHeight,
+    onClick = _ref.onClick,
+    children = _ref.children,
     props = _objectWithoutProperties(_ref, _excluded);
   if (disabled) {
     onClick = function onClick() {};
@@ -462,10 +460,8 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const Input = props => {
-  const {
-      small,
-      multiline
-    } = props,
+  const small = props.small,
+    multiline = props.multiline,
     componentProps = _objectWithoutProperties(props, _excluded);
   if (multiline) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", _extends({}, componentProps, {
@@ -594,10 +590,9 @@ class Login extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       waiting: true,
       error: null
     });
-    const {
-      userId,
-      password
-    } = this.state;
+    const _this$state = this.state,
+      userId = _this$state.userId,
+      password = _this$state.password;
     try {
       const session = await Object(_lib_session_js__WEBPACK_IMPORTED_MODULE_6__["default"])(userId, password);
       if (!session || !session.username) throw new Error(this.props.intl.formatMessage(messages.failedToLogIn));

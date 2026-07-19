@@ -270,6 +270,40 @@ const blockColors = {
 
 /***/ }),
 
+/***/ "./src/lib/themes/accent/tsmod.js":
+/*!****************************************!*\
+  !*** ./src/lib/themes/accent/tsmod.js ***!
+  \****************************************/
+/*! exports provided: guiColors, blockColors */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "guiColors", function() { return guiColors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "blockColors", function() { return blockColors; });
+const guiColors = {
+  'motion-primary': '#4DB5FF',
+  'motion-primary-transparent': 'rgba(77, 181, 255, 0.9)',
+  'motion-tertiary': 'rgb(204, 156, 51)',
+  'looks-secondary': '#4DB5FF',
+  'looks-transparent': 'rgba(255, 190, 77, 0.35)',
+  'looks-light-transparent': '#ff4d4d26',
+  'looks-secondary-dark': 'hsla(0, 42%, 51%, 1)',
+  'data-primary': '#6992ff',
+  'extensions-primary': 'hsla(10, 85%, 65%, 1)',
+  'extensions-tertiary': 'rgb(189, 99, 15)',
+  'extensions-transparent': 'hsla(10, 85%, 65%, 0.35)',
+  'extensions-light': 'hsla(10, 57%, 85%, 1)',
+  'drop-highlight': '#ff8c8c'
+};
+const blockColors = {
+  checkboxActiveBackground: 'rgb(255, 183, 76)',
+  checkboxActiveBorder: 'rgb(204, 130, 51)'
+};
+
+
+/***/ }),
+
 /***/ "./src/lib/themes/blocks/dark.js":
 /*!***************************************!*\
   !*** ./src/lib/themes/blocks/dark.js ***!
@@ -964,12 +998,12 @@ const guiColors = {
   'pen-tertiary': 'hsla(163, 86%, 30%, 1)',
   /* #0B8E69 */
 
-  'error-primary': 'hsla(30, 100%, 55%, 1)',
-  /* #FF8C1A */
+  'error-primary': 'hsl(205, 100%, 65%)',
+  /* #4DB5FF */
   'error-light': 'hsla(30, 100%, 70%, 1)',
   /* #FFB366 */
-  'error-transparent': 'hsla(30, 100%, 55%, 0.25)',
-  /* #FF8C1A */
+  'error-transparent': 'hsl(205, 100%, 65%)',
+  /* #4DB5FF */
 
   'extensions-primary': 'hsla(163, 85%, 40%, 1)',
   /* #0FBD8C */
@@ -1035,6 +1069,12 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
@@ -1062,7 +1102,10 @@ const evaluateCSS = (css, noVar) => {
 const applyGuiColors = theme => {
   const doc = document.documentElement;
   const defaultGuiColors = ___WEBPACK_IMPORTED_MODULE_0__["Theme"].light.getGuiColors();
-  for (const [name, value] of Object.entries(defaultGuiColors)) {
+  for (const _ref of Object.entries(defaultGuiColors)) {
+    var _ref2 = _slicedToArray(_ref, 2);
+    const name = _ref2[0];
+    const value = _ref2[1];
     doc.style.setProperty("--".concat(name, "-default"), value);
   }
   const guiColors = theme.getGuiColors();
@@ -1110,12 +1153,10 @@ const applyGuiColors = theme => {
       }
       return null;
     };
-    const rgbToHsl = _ref => {
-      let {
-        r,
-        g,
-        b
-      } = _ref;
+    const rgbToHsl = _ref3 => {
+      let r = _ref3.r,
+        g = _ref3.g,
+        b = _ref3.b;
       r /= 255;
       g /= 255;
       b /= 255;
@@ -1148,23 +1189,19 @@ const applyGuiColors = theme => {
         l: l * 100
       };
     };
-    const hslToString = _ref2 => {
-      let {
-        h,
-        s,
-        l,
-        a
-      } = _ref2;
+    const hslToString = _ref4 => {
+      let h = _ref4.h,
+        s = _ref4.s,
+        l = _ref4.l,
+        a = _ref4.a;
       if (typeof a === 'number' && a < 1) return "hsla(".concat(Math.round(h), ", ").concat(Math.round(s), "%, ").concat(Math.round(l), "%, ").concat(a, ")");
       return "hsl(".concat(Math.round(h), ", ").concat(Math.round(s), "%, ").concat(Math.round(l), "%)");
     };
-    const rgbaString = _ref3 => {
-      let {
-        r,
-        g,
-        b,
-        a
-      } = _ref3;
+    const rgbaString = _ref5 => {
+      let r = _ref5.r,
+        g = _ref5.g,
+        b = _ref5.b,
+        a = _ref5.a;
       return "rgba(".concat(Math.round(r), ", ").concat(Math.round(g), ", ").concat(Math.round(b), ", ").concat(a, ")");
     };
     let rgb = null;
@@ -1205,7 +1242,10 @@ const applyGuiColors = theme => {
       })));
     }
   }
-  for (const [name, value] of Object.entries(guiColors)) {
+  for (const _ref6 of Object.entries(guiColors)) {
+    var _ref7 = _slicedToArray(_ref6, 2);
+    const name = _ref7[0];
+    const value = _ref7[1];
     doc.style.setProperty("--".concat(name), value);
   }
   const blockColors = theme.getBlockColors();
@@ -1250,7 +1290,7 @@ const applyGuiColors = theme => {
 /*!*********************************!*\
   !*** ./src/lib/themes/index.js ***!
   \*********************************/
-/*! exports provided: Theme, defaultBlockColors, ACCENT_RED, ACCENT_ORANGE, ACCENT_GREEN, ACCENT_PURPLE, ACCENT_BLUE, ACCENT_RAINBOW, ACCENT_CUSTOM, ACCENT_MAP, GUI_LIGHT, GUI_DARK, GUI_MAP, BLOCKS_THREE, BLOCKS_DARK, BLOCKS_HIGH_CONTRAST, BLOCKS_CUSTOM, BLOCKS_MAP */
+/*! exports provided: Theme, defaultBlockColors, ACCENT_RED, ACCENT_ORANGE, ACCENT_GREEN, ACCENT_PURPLE, ACCENT_BLUE, ACCENT_RAINBOW, ACCENT_CUSTOM, ACCENT_TSMod, ACCENT_MAP, GUI_LIGHT, GUI_DARK, GUI_MAP, BLOCKS_THREE, BLOCKS_DARK, BLOCKS_HIGH_CONTRAST, BLOCKS_CUSTOM, BLOCKS_MAP */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1264,6 +1304,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_BLUE", function() { return ACCENT_BLUE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_RAINBOW", function() { return ACCENT_RAINBOW; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_CUSTOM", function() { return ACCENT_CUSTOM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_TSMod", function() { return ACCENT_TSMod; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ACCENT_MAP", function() { return ACCENT_MAP; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GUI_LIGHT", function() { return GUI_LIGHT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GUI_DARK", function() { return GUI_DARK; });
@@ -1282,15 +1323,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _accent_green__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./accent/green */ "./src/lib/themes/accent/green.js");
 /* harmony import */ var _accent_rainbow__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./accent/rainbow */ "./src/lib/themes/accent/rainbow.js");
 /* harmony import */ var _accent_custom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./accent/custom */ "./src/lib/themes/accent/custom.js");
-/* harmony import */ var _gui_light__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./gui/light */ "./src/lib/themes/gui/light.js");
-/* harmony import */ var _gui_dark__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./gui/dark */ "./src/lib/themes/gui/dark.js");
-/* harmony import */ var _blocks_three__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./blocks/three */ "./src/lib/themes/blocks/three.js");
-/* harmony import */ var _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./blocks/high-contrast */ "./src/lib/themes/blocks/high-contrast.js");
-/* harmony import */ var _blocks_dark__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/dark */ "./src/lib/themes/blocks/dark.js");
+/* harmony import */ var _accent_tsmod__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./accent/tsmod */ "./src/lib/themes/accent/tsmod.js");
+/* harmony import */ var _gui_light__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./gui/light */ "./src/lib/themes/gui/light.js");
+/* harmony import */ var _gui_dark__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./gui/dark */ "./src/lib/themes/gui/dark.js");
+/* harmony import */ var _blocks_three__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./blocks/three */ "./src/lib/themes/blocks/three.js");
+/* harmony import */ var _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/high-contrast */ "./src/lib/themes/blocks/high-contrast.js");
+/* harmony import */ var _blocks_dark__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/dark */ "./src/lib/themes/blocks/dark.js");
 var _Theme;
 function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == typeof i ? i : i + ""; }
 function _toPrimitive(t, r) { if ("object" != typeof t || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != typeof i) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
 
 
 
@@ -1311,6 +1354,7 @@ const ACCENT_ORANGE = 'orange';
 const ACCENT_GREEN = 'green';
 const ACCENT_RAINBOW = 'rainbow';
 const ACCENT_CUSTOM = 'custom';
+const ACCENT_TSMod = 'TSMod';
 const ACCENT_MAP = {
   [ACCENT_PURPLE]: _accent_purple__WEBPACK_IMPORTED_MODULE_1__,
   [ACCENT_BLUE]: _accent_blue__WEBPACK_IMPORTED_MODULE_2__,
@@ -1318,14 +1362,15 @@ const ACCENT_MAP = {
   [ACCENT_ORANGE]: _accent_orange__WEBPACK_IMPORTED_MODULE_4__,
   [ACCENT_GREEN]: _accent_green__WEBPACK_IMPORTED_MODULE_5__,
   [ACCENT_RAINBOW]: _accent_rainbow__WEBPACK_IMPORTED_MODULE_6__,
-  [ACCENT_CUSTOM]: _accent_custom__WEBPACK_IMPORTED_MODULE_7__
+  [ACCENT_CUSTOM]: _accent_custom__WEBPACK_IMPORTED_MODULE_7__,
+  [ACCENT_TSMod]: _accent_tsmod__WEBPACK_IMPORTED_MODULE_8__
 };
-const ACCENT_DEFAULT = ACCENT_ORANGE;
+const ACCENT_DEFAULT = ACCENT_TSMod;
 const GUI_LIGHT = 'light';
 const GUI_DARK = 'dark';
 const GUI_MAP = {
-  [GUI_LIGHT]: _gui_light__WEBPACK_IMPORTED_MODULE_8__,
-  [GUI_DARK]: _gui_dark__WEBPACK_IMPORTED_MODULE_9__
+  [GUI_LIGHT]: _gui_light__WEBPACK_IMPORTED_MODULE_9__,
+  [GUI_DARK]: _gui_dark__WEBPACK_IMPORTED_MODULE_10__
 };
 const GUI_DEFAULT = GUI_LIGHT;
 const BLOCKS_THREE = 'three';
@@ -1333,33 +1378,33 @@ const BLOCKS_DARK = 'dark';
 const BLOCKS_HIGH_CONTRAST = 'high-contrast';
 const BLOCKS_CUSTOM = 'custom';
 const BLOCKS_DEFAULT = BLOCKS_THREE;
-const defaultBlockColors = _blocks_three__WEBPACK_IMPORTED_MODULE_10__["blockColors"];
+const defaultBlockColors = _blocks_three__WEBPACK_IMPORTED_MODULE_11__["blockColors"];
 const BLOCKS_MAP = {
   [BLOCKS_THREE]: {
     blocksMediaFolder: 'blocks-media/default',
-    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_10__["blockColors"],
-    extensions: _blocks_three__WEBPACK_IMPORTED_MODULE_10__["extensions"],
+    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_11__["blockColors"],
+    extensions: _blocks_three__WEBPACK_IMPORTED_MODULE_11__["extensions"],
     customExtensionColors: {},
     useForStage: true
   },
   [BLOCKS_HIGH_CONTRAST]: {
     blocksMediaFolder: 'blocks-media/high-contrast',
-    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_11__["blockColors"], defaultBlockColors),
-    extensions: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_11__["extensions"],
-    customExtensionColors: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_11__["customExtensionColors"],
+    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_12__["blockColors"], defaultBlockColors),
+    extensions: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_12__["extensions"],
+    customExtensionColors: _blocks_high_contrast__WEBPACK_IMPORTED_MODULE_12__["customExtensionColors"],
     useForStage: true
   },
   [BLOCKS_DARK]: {
     blocksMediaFolder: 'blocks-media/default',
-    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_dark__WEBPACK_IMPORTED_MODULE_12__["blockColors"], defaultBlockColors),
-    extensions: _blocks_dark__WEBPACK_IMPORTED_MODULE_12__["extensions"],
-    customExtensionColors: _blocks_dark__WEBPACK_IMPORTED_MODULE_12__["customExtensionColors"],
+    colors: lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, _blocks_dark__WEBPACK_IMPORTED_MODULE_13__["blockColors"], defaultBlockColors),
+    extensions: _blocks_dark__WEBPACK_IMPORTED_MODULE_13__["extensions"],
+    customExtensionColors: _blocks_dark__WEBPACK_IMPORTED_MODULE_13__["customExtensionColors"],
     useForStage: false
   },
   [BLOCKS_CUSTOM]: {
     // to be filled by editor-theme3 addon
     blocksMediaFolder: 'blocks-media/default',
-    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_10__["blockColors"],
+    colors: _blocks_three__WEBPACK_IMPORTED_MODULE_11__["blockColors"],
     extensions: {},
     customExtensionColors: {},
     useForStage: false
@@ -1405,7 +1450,7 @@ class Theme {
     return BLOCKS_MAP[this.blocks].blocksMediaFolder;
   }
   getGuiColors() {
-    return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, ACCENT_MAP[this.accent].guiColors, GUI_MAP[this.gui].guiColors, _gui_light__WEBPACK_IMPORTED_MODULE_8__["guiColors"]);
+    return lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, ACCENT_MAP[this.accent].guiColors, GUI_MAP[this.gui].guiColors, _gui_light__WEBPACK_IMPORTED_MODULE_9__["guiColors"]);
   }
   getBlockColors() {
     let blockColors = lodash_defaultsdeep__WEBPACK_IMPORTED_MODULE_0___default()({}, ACCENT_MAP[this.accent].blockColors, GUI_MAP[this.gui].blockColors, BLOCKS_MAP[this.blocks].colors);

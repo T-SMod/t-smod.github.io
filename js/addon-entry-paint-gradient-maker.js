@@ -98,14 +98,18 @@ const resources = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 // Gradient Maker Addon
 // Original by: SharkPool
 /* harmony default export */ __webpack_exports__["default"] = (async function (_ref) {
-  let {
-    addon,
-    console,
-    msg
-  } = _ref;
+  let addon = _ref.addon,
+    console = _ref.console,
+    msg = _ref.msg;
   const customID = "paintGradientMakerSelectButton";
   const symbolTag = Symbol("custom-gradient-tag");
   const paperLinkModes = new Set(["TEXT", "OVAL", "RECT", "ROUNDED_RECT", "TRIANGLE", "SUSSY", "ARROW"]);
@@ -127,7 +131,10 @@ __webpack_require__.r(__webpack_exports__);
       const name = child.classList.toString();
       if (classes[name] === undefined) classes[name] = 1;else classes[name] = 0;
     }
-    for (const [cls, count] of Object.entries(classes)) {
+    for (const _ref2 of Object.entries(classes)) {
+      var _ref3 = _slicedToArray(_ref2, 2);
+      const cls = _ref3[0];
+      const count = _ref3[1];
       if (count) selectedClassName = cls;else unselectedClassName = cls;
     }
   }
@@ -198,11 +205,9 @@ __webpack_require__.r(__webpack_exports__);
     if (swatch) swatch.style.background = encodeGradHTML(settings);
   }
   function paperGrad2CSS(paperGrad) {
-    const {
-      gradient,
-      origin,
-      destination
-    } = paperGrad;
+    const gradient = paperGrad.gradient,
+      origin = paperGrad.origin,
+      destination = paperGrad.destination;
     if (!gradient || !origin || !destination) return null;
     const stops = gradient.stops.map(s => "".concat(s.color.toCSS(true), " ").concat(Math.round(s.offset * 100), "%"));
     if (gradient.radial) return "radial-gradient(circle, ".concat(stops.join(", "), ")");else return "linear-gradient(".concat(position2Angle(destination, origin), "deg, ").concat(stops.join(", "), ")");
@@ -216,11 +221,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   }
   function decodeSelectedGrad(item, draggableDiv, settingsDiv) {
-    const {
-      gradient,
-      origin,
-      destination
-    } = extractGradient(item[modalStorage.path]);
+    const _extractGradient = extractGradient(item[modalStorage.path]),
+      gradient = _extractGradient.gradient,
+      origin = _extractGradient.origin,
+      destination = _extractGradient.destination;
     if (!gradient || !origin || !destination) return draggableDiv.append(createDraggable(), createDraggable());
 
     // Create draggables
@@ -373,7 +377,10 @@ __webpack_require__.r(__webpack_exports__);
 
   // GUI utils
   function showSelectedGrad(item) {
-    const [fillSwatch, outlineSwatch] = document.querySelectorAll("div[class^=color-button_color-button_] div[class^=color-button_color-button-swatch_]");
+    const _document$querySelect = document.querySelectorAll("div[class^=color-button_color-button_] div[class^=color-button_color-button-swatch_]"),
+      _document$querySelect2 = _slicedToArray(_document$querySelect, 2),
+      fillSwatch = _document$querySelect2[0],
+      outlineSwatch = _document$querySelect2[1];
     const outCSSGrad = paperGrad2CSS(extractGradient(item.strokeColor));
     if (outlineSwatch) {
       if (outCSSGrad) outlineSwatch.style.background = outCSSGrad;else if (!item.strokeColor || item.strokeWidth === 0) outlineSwatch.style.background = "#fff";
@@ -386,11 +393,9 @@ __webpack_require__.r(__webpack_exports__);
         fillSwatch.style.background = fillCSSGrad;
 
         // Update cache
-        const {
-          gradient,
-          destination,
-          origin
-        } = fillGrad;
+        const gradient = fillGrad.gradient,
+          destination = fillGrad.destination,
+          origin = fillGrad.origin;
         modalStorage._gradCache = {
           gradient,
           settings: {
@@ -602,16 +607,15 @@ __webpack_require__.r(__webpack_exports__);
       selectedPointer: undefined,
       path: paint.modals.fillColor ? "fillColor" : "strokeColor"
     };
-    const {
-      backdrop,
-      container,
-      content,
-      closeButton,
-      remove
-    } = addon.tab.createModal("Complex Gradient", {
-      isOpen: true,
-      useEditorClasses: true
-    });
+    const _addon$tab$createModa = addon.tab.createModal("Complex Gradient", {
+        isOpen: true,
+        useEditorClasses: true
+      }),
+      backdrop = _addon$tab$createModa.backdrop,
+      container = _addon$tab$createModa.container,
+      content = _addon$tab$createModa.content,
+      closeButton = _addon$tab$createModa.closeButton,
+      remove = _addon$tab$createModa.remove;
     container.classList.add("paintGradientMakerPopup");
     content.classList.add("paintGradientMakerPopupContent");
     backdrop.addEventListener("click", remove);
@@ -661,11 +665,9 @@ __webpack_require__.r(__webpack_exports__);
     ReduxStore.subscribe(() => {
       const paint = ReduxStore.getState().scratchPaint;
       if (!paint || (paint === null || paint === void 0 ? void 0 : paint.format) === undefined || (paint === null || paint === void 0 ? void 0 : paint.format) === null) return;
-      const {
-        mode,
-        selectedItems,
-        modals
-      } = paint;
+      const mode = paint.mode,
+        selectedItems = paint.selectedItems,
+        modals = paint.modals;
 
       // No bitmap support
       if (paint.format.startsWith("BITMAP")) {

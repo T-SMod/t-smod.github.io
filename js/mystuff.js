@@ -344,17 +344,15 @@ function _objectWithoutPropertiesLoose(r, e) { if (null == r) return {}; var t =
 
 
 const ButtonComponent = _ref => {
-  let {
-      className,
-      disabled,
-      iconAlt,
-      iconClassName,
-      iconSrc,
-      iconWidth,
-      iconHeight,
-      onClick,
-      children
-    } = _ref,
+  let className = _ref.className,
+    disabled = _ref.disabled,
+    iconAlt = _ref.iconAlt,
+    iconClassName = _ref.iconClassName,
+    iconSrc = _ref.iconSrc,
+    iconWidth = _ref.iconWidth,
+    iconHeight = _ref.iconHeight,
+    onClick = _ref.onClick,
+    children = _ref.children,
     props = _objectWithoutProperties(_ref, _excluded);
   if (disabled) {
     onClick = function onClick() {};
@@ -444,6 +442,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_themes_guiHelpers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../lib/themes/guiHelpers */ "./src/lib/themes/guiHelpers.js");
 /* harmony import */ var _lib_themes_themePersistance__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../lib/themes/themePersistance */ "./src/lib/themes/themePersistance.js");
 /* harmony import */ var _lib_session_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../lib/session.js */ "./src/lib/session.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
@@ -476,10 +480,22 @@ const messages = Object(react_intl__WEBPACK_IMPORTED_MODULE_3__["defineMessages"
   }
 });
 const User = props => {
-  const [userData, setUserData] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null);
-  const [projects, setProjects] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]);
-  const [loading, setLoading] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(true);
-  const [error, setError] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null);
+  const _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
+    _useState2 = _slicedToArray(_useState, 2),
+    userData = _useState2[0],
+    setUserData = _useState2[1];
+  const _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]),
+    _useState4 = _slicedToArray(_useState3, 2),
+    projects = _useState4[0],
+    setProjects = _useState4[1];
+  const _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(true),
+    _useState6 = _slicedToArray(_useState5, 2),
+    loading = _useState6[0],
+    setLoading = _useState6[1];
+  const _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(null),
+    _useState8 = _slicedToArray(_useState7, 2),
+    error = _useState8[0],
+    setError = _useState8[1];
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
     const fetchFullProfile = async () => {
       setLoading(true);
